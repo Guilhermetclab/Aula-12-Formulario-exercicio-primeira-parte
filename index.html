@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        /* Seletor geral */
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Carros Elétricos</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="nameCompleto">Nome Completo: </label><br>
+            <!-- 
+            required - obrigatório; 
+            minlength - Tamanho mínimo; 
+            maxlength - Tamanho máximo;
+            size - Tamanho da caixa;
+            placeholder - dica de preenchimento;
+            autocomplete off - Não completar o preenchimento;           
+            -->
+            <input type="text" name="name" id="nameCompleto" required minlength="1" maxlength="20" size="20" 
+            placeholder="Digite seu nome completo" autocomplete="username">
+            <!-- autocomplete de username -->
+        </p>
+        <p>
+            <label for="modelcar">Modelo de carro elétrico favorito: </label><br>
+            <input type="text" name="carro" id="modelcar" required minlength="5" maxlength="20" size="20" placeholder="Ex: Tesla Model 3" autocomplete="">
+           
+        </p>
+        <p>
+            <label for="isen">Senha: </label><br>
+            <input type="password" name="sen" id="isen" required minlength="6" maxlength="20" size="15" placeholder="Mínimo 6 caracteres" autocomplete="current-password">
+            <!-- current-password - senha atual -->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+
+    </form>
+    
+</body>
+</html>
 
